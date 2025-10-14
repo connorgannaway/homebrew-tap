@@ -5,29 +5,29 @@
 class How < Formula
   desc "AI-powered terminal command assistant."
   homepage "https://github.com/connorgannaway/how"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/connorgannaway/how/releases/download/v0.1.0/how_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/connorgannaway/how/releases/download/v0.1.1/how_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "32e9459981e03493e3e49b45f84e7c4df07eb2e4cc9653294aeb7317941c7352"
+      sha256 "634a49002f4aa79b19960999b25a48fa016b9a9ed208389dd8ba61604109e8a3"
 
       def install
         bin.install "how"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/connorgannaway/how/releases/download/v0.1.0/how_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/connorgannaway/how/releases/download/v0.1.1/how_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "06198f4fb3a06adea1b21c468bce10c3bbf060173b4453c74b0e73cc2efba89c"
+      sha256 "1f47e0da5a48c0b92589c70a41264f7932accdead304d5bb06aa6e23eb106d6b"
 
       def install
         bin.install "how"
@@ -37,23 +37,23 @@ class How < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/connorgannaway/how/releases/download/v0.1.0/how_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/connorgannaway/how/releases/download/v0.1.1/how_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "66ac2b5f270d29fd4f2a52bbec535c888014415c3534624070db0af2acec3c8d"
+      sha256 "d186cd8691ec0b3845c6186d62f75e25eeb928196ad976fddab07daeee524331"
       def install
         bin.install "how"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/connorgannaway/how/releases/download/v0.1.0/how_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/connorgannaway/how/releases/download/v0.1.1/how_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "4c6aa6a87794fc08141c64a8880b671e724dfc285874aedc538d21011deff1b7"
+      sha256 "819e8dffd60982520d706ba69c95b933f17732e8d9a8e2de59332f24a1152c0b"
       def install
         bin.install "how"
       end
